@@ -25,6 +25,7 @@ local function wrap( name )
             local err = sql.LastError()
             if err ~= "" then
                 local msg = "SQL Error: " .. err
+                print( query )
                 ErrorNoHaltWithStack( msg )
             end
         end
